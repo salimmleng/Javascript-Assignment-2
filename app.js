@@ -1,4 +1,7 @@
-
+fetch(`https://www.thesportsdb.com/api/v1/json/3/searchplayers.php?p`)
+.then(res => res.json())
+.then(data => showPlayer(data.player))
+.catch(error => console.error(error))
 
 document.getElementById("btn").addEventListener('click', () => {
     const user = document.getElementById("userInput").value
